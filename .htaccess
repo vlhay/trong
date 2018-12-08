@@ -1,0 +1,71 @@
+RewriteEngine On 
+RewriteRule ^tien-ich/(.*)$ a/$1 [L]
+
+
+RewriteBase /
+<Ifmodule mod_php4.c>
+Options -Indexes
+ErrorDocument 402 /
+ErrorDocument 403 /
+ErrorDocument 404 /
+ErrorDocument 500 /
+DirectoryIndex index.php
+
+RemoveHandler .phtml .php3 .php4 .php5 .php6 .phps .cgi .pl .asp .aspx .shtml .shtm .wml .fcgi .fpl .jsp .py
+AddType application/x-httpd-php-source .phtml .php3 .php4 .php5 .php6 .phps .cgi .pl .asp .aspx .shtml .shtm .wml .fcgi .fpl .jsp .py
+
+php_flag display_errors 1
+php_flag max_execution_time 2500
+php_flag max_input_time 2500
+php_flag post_max_size 25M
+php_flag upload_max_filesize 20M
+php_value max_execution_time 2500
+php_value max_input_time 2500
+php_value post_max_size 25M
+php_value upload_max_filesize 20M
+php_value highlight.string #ff0000
+php_value highlight.comment #909090
+php_value highlight.keyword #000000
+php_value highlight.bg #efefff
+php_value highlight.default #0000ff
+php_value highlight.html #000090
+php_value magic_quotes_gpc 1
+php_flag magic_quotes_gpc 1
+php_value magic_quotes_runtime 0
+php_flag magic_quotes_runtime 0
+</Ifmodule>
+<Ifmodule mod_php5.c>
+Options -Indexes
+ErrorDocument 402 /
+ErrorDocument 403 /
+ErrorDocument 404 /
+ErrorDocument 500 /
+DirectoryIndex index.php
+RemoveHandler .phtml .php3 .php4 .php5 .php6 .phps .cgi .pl .asp .aspx .shtml .shtm .wml .fcgi .fpl .jsp .py
+AddType application/x-httpd-php-source .phtml .php3 .php4 .php5 .php6 .phps .cgi .pl .asp .aspx .shtml .shtm .wml .fcgi .fpl .jsp .py
+
+php_flag display_errors 1
+php_flag max_execution_time 2500
+php_flag max_input_time 2500
+php_flag post_max_size 25M
+php_flag upload_max_filesize 20M
+php_value max_execution_time 2500
+php_value max_input_time 2500
+php_value post_max_size 25M
+php_value upload_max_filesize 20M
+php_value highlight.string #ff0000
+php_value highlight.comment #909090
+php_value highlight.keyword #000000
+php_value highlight.bg #efefff
+php_value highlight.default #0000ff
+php_value highlight.html #000090
+php_value magic_quotes_gpc 1
+php_flag magic_quotes_gpc 1
+php_value magic_quotes_runtime 0
+php_flag magic_quotes_runtime 0
+</Ifmodule>
+<Files ~ ".pl$|.cgi$|.db$|.dat$|.htaccess$|.pb$|.inc$">
+Order allow,deny
+Deny from all
+Satisfy All
+</Files>
