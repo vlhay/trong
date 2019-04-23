@@ -23,7 +23,7 @@ echo '
 <div class="item">
 <p id="copy"><span style="color:red;font-weight:bold;" >Kết Quả Chạy PHP</span></p></div>
 <div class="item">';
-$nd1 
+ $nd1 ;
 echo '</div>';
 }
 elseif ($_POST['text']){
