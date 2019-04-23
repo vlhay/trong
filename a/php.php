@@ -16,7 +16,7 @@ echo '
 if ($_POST['html']){
 $nd1 =$_POST['nd'];
 $nd = htmlentities(html_entity_decode($_POST['nd']));
-$nd2 = htmlentities($_POST['nd']);
+$nd2 = html_entity_decode(html_entity_decode($_POST['nd']));
 
 echo '
 <div class="item">Thành Công <a href="#copy" style="color:red;font-weight:bold;">Copy Văn Bản</a></div>
