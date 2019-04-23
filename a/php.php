@@ -8,7 +8,7 @@ echo '
 <div class="item">
 <form method="post">
 <p>Nhập Văn Bản</p>
-<p><textarea rows="5" name="nd" style="width:98%" ></textarea></p>
+<p><textarea rows="5" name="nd" style="width:98%" >'.$nd1.'</textarea></p>
 
 <p><input type="submit" name="html" value="Sang HTML" >       <input type="submit" name="text" value="Sang TEXT" ></p></form></div>';
 
@@ -16,7 +16,7 @@ echo '
 if ($_POST['html']){
 $nd1 =$_POST['nd'];
 $nd = htmlentities(html_entity_decode($_POST['nd']));
-$nd2 = html_entity_decode($_POST['nd']);
+$nd2 = htmlentities($_POST['nd']);
 
 echo '
 <div class="item">Thành Công <a href="#copy" style="color:red;font-weight:bold;">Copy Văn Bản</a></div>
