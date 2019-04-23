@@ -16,11 +16,13 @@ echo '
 if ($_POST['html']){
 $nd1 =$_POST['nd'];
 $nd = htmlentities(html_entity_decode($_POST['nd']));
+$nd2 = html_entity_decode($_POST['nd']);
+
 echo '
 <div class="item">Thành Công <a href="#copy" style="color:red;font-weight:bold;">Copy Văn Bản</a></div>
 <div class="item">
 <p id="copy"><span style="color:red;font-weight:bold;" >Kết Quả Chạy PHP</span></p></div>
-<div class="item">'.$nd1.'</div>';
+<div class="item">'.$nd2.'</div>';
 }
 elseif ($_POST['text']){
 $nd1 =$_POST['nd'];
