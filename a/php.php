@@ -22,7 +22,9 @@ echo '
 <div class="item">Thành Công <a href="#copy" style="color:red;font-weight:bold;">Copy Văn Bản</a></div>
 <div class="item">
 <p id="copy"><span style="color:red;font-weight:bold;" >Kết Quả Chạy PHP</span></p></div>
-<div class="item">'.$nd2.'</div>';
+<div class="item">';
+$nd1 
+echo '</div>';
 }
 elseif ($_POST['text']){
 $nd1 =$_POST['nd'];
